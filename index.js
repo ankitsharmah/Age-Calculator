@@ -2,8 +2,10 @@
 const currentDate = new Date();
 const ink = document.querySelector('#Input');
 const inLength=ink.value;
-// console.log(inLength);
-// Get the current year
+const Year =document.querySelector('.year');
+const mon =document.querySelector('.mon');
+const dayy =document.querySelector('.day');
+const tog = document.querySelector('.tog').querySelectorAll('c');
 const currentYear = currentDate.getFullYear();
 
  let uInputYear = '';
@@ -31,6 +33,11 @@ uInputYear=inLength.split("-");
         ink.select();
 
     }
+    else if(parseInt(uInputYear[2])<4 || parseInt(uInputYear[2])>year){
+        alert ("please enter valid year");
+        ink.select();
+
+    }
     else{
         const input = document.querySelector('#Input').value;
 const inpu = document.querySelector('#Input');
@@ -51,11 +58,15 @@ const dayy =document.querySelector('.day');
 }
 
 
+function reset(){
+
+
+}
 
 
 
 function hyp(){
-    // console.log("claaed on change");
+    console.log("claaed on change");
 const input = document.querySelector('#Input');
 let y = input.value;
     if(y.length === 2){
@@ -73,7 +84,9 @@ let y = input.value;
 
      }
      
-     
+     Year.innerHTML='0';
+mon.innerHTML='0';
+dayy.innerHTML='0';
 }
 
 
